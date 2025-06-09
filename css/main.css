@@ -1,0 +1,388 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  text-transform: capitalize;
+  font-family: "Roboto", sans-serif;
+}
+
+:root {
+  --main-transtion: 0.3s;
+  --back-color: #00b289;
+  --font-color: #4c4d5f;
+  --main-color: #fff;
+}
+
+.parent .nav .links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+.parent .nav .links ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  padding: 20px 0;
+  flex-wrap: wrap;
+}
+
+.parent .nav .links ul li {
+  padding: 0 25px;
+}
+
+.parent .nav .links ul li:first-child {
+  font-size: 30px;
+  font-weight: bold;
+  color: var(--back-color);
+}
+
+.parent .nav .links ul :nth-child(6) {
+  font-size: 20px;
+  color: var(--back-color);
+  border: 2px solid var(--back-color);
+  margin: 0 15px;
+  padding: 15px;
+  font-weight: bold;
+  border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+}
+
+.parent .nav .links ul :nth-child(7) {
+  font-size: 20px;
+  font-weight: bold;
+  padding: 15px;
+  background-color: var(--back-color);
+  border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+  color: white;
+}
+
+.parent .content .container {
+  padding: 25px;
+  border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+  width: 80%;
+  position: relative;
+  margin: 20px auto;
+}
+
+.parent .content .container .heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.parent .content .container .heading .chosse {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.parent .content .container .heading .chosse span {
+  margin: 0 10px;
+}
+
+.parent .content .container .heading .size {
+  font-size: 25px;
+  color: var(--back-color);
+}
+
+.label {
+  height: 40px;
+  width: 70px;
+  background-color: var(--back-color);
+  border-radius: 30px;
+  -webkit-box-shadow: inset 0 0 5px 4px rgba(255, 255, 255, 1),
+    inset 0 0 20px 1px rgba(0, 0, 0, 0.488), 10px 20px 30px rgba(0, 0, 0, 0.096),
+    inset 0 0 0 3px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 0 5px 4px rgba(255, 255, 255, 1),
+    inset 0 0 20px 1px rgba(0, 0, 0, 0.488), 10px 20px 30px rgba(0, 0, 0, 0.096),
+    inset 0 0 0 3px rgba(0, 0, 0, 0.3);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+  -webkit-transition: -webkit-transform 0.4s;
+  transition: -webkit-transform 0.4s;
+  transition: transform 0.4s;
+}
+
+.label:hover {
+  -webkit-transform: perspective(100px) rotateX(5deg) rotateY(-5deg);
+  transform: perspective(100px) rotateX(5deg) rotateY(-5deg);
+}
+
+#checkbox:checked~.label:hover {
+  -webkit-transform: perspective(100px) rotateX(-5deg) rotateY(5deg);
+  transform: perspective(100px) rotateX(-5deg) rotateY(5deg);
+}
+
+#checkbox {
+  display: none;
+}
+
+#checkbox:checked~.label::before {
+  left: 35px;
+  background-color: #000000;
+  background-image: linear-gradient(315deg, #000000 0%, #414141 70%);
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.label::before {
+  position: absolute;
+  content: "";
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  background-color: #fff;
+  background-image: linear-gradient(130deg,
+      #757272 10%,
+      #ffffff 11%,
+      #726f6f 62%);
+  left: 10px;
+  -webkit-box-shadow: 0 2px 1px rgba(0, 0, 0, 0.3),
+    10px 10px 10px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 2px 1px rgba(0, 0, 0, 0.3), 10px 10px 10px rgba(0, 0, 0, 0.3);
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+
+.parent-2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+  line-height: 1.6;
+  flex-wrap: wrap;
+}
+
+.parent-2 div {
+  background-color: #fff;
+  padding: 20px;
+  border: 2px solid #ddd;
+  width: 300px;
+  margin: 15px 0;
+  border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+  position: relative;
+}
+
+.parent-2 div button {
+  padding: 10px;
+  margin: 5px;
+  background-color: var(--back-color);
+  border: none;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  color: var(--main-color);
+  font-weight: 500;
+}
+
+.parent-2 .workflow-2 mark {
+  background-color: #f8db62;
+  color: var(--main-color);
+  padding: 3px;
+}
+
+.parent-2 p:first-child,
+.parent-2 span {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.parent-2 p i {
+  color: #00b289;
+}
+
+.container .parent-3 h1 {
+  text-align: center;
+  margin: 20px;
+}
+
+
+.container .parent-3 .one,
+.container .parent-3 .two,
+.container .parent-3 .three {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--main-color);
+  margin-bottom: 10px;
+  padding: 25px;
+  line-height: 1.6;
+  position: relative;
+  border: 2px solid var(--font-color);
+}
+
+.container .parent-3 span {
+  font-weight: bold;
+  font-size: 20px;
+  text-align: center;
+}
+
+.container .parent-3 .three a {
+  text-decoration: none;
+  position: absolute;
+  color: green;
+  bottom: 0;
+}
+
+
+.container .parent-3 .three a::after {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 0px;
+  border-style: solid;
+  border-width: 5px;
+  border-color: transparent transparent transparent green;
+  top: 9px;
+  left: 90px;
+}
+
+.container .parent-3 .three a:hover {
+  color: blue;
+  text-decoration: underline;
+}
+
+.parent-4 .business {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 35px;
+  background-color: #f2faff;
+  height: 250px;
+  padding: 15px;
+  font-weight: 500;
+  line-height: 1.8;
+  font-size: 25px;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+.parent-4 .business .help-you {
+  font-family: Georgia, 'Times New Roman', Times, serif
+}
+
+.parent-4 .business .help-you span {
+  color: var(--back-color);
+}
+
+.parent-4 .business .free {
+  background-color: var(--back-color);
+  color: white;
+  width: 200px;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+}
+
+.parent-4 .business .free a {
+  text-decoration: none;
+  color: white;
+}
+
+.parent-4 .question {
+  margin-top: 50px;
+  position: relative;
+}
+
+.parent-4 .question h2 {
+  text-align: center;
+  color: var(--back-color);
+}
+
+.parent-4 .question p {
+  line-height: 2;
+  font-size: 18px;
+  color: var(--font-color);
+  margin: 5px 0;
+  position: relative;
+}
+
+.parent-4 .question p:not(:last-of-type) {
+  border-bottom: 3px solid var(--back-color);
+}
+
+.parent-5 {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+  line-height: 1.6;
+}
+
+.parent-5 a {
+  text-decoration: none;
+  color: var(--font-color);
+  transition: var(--main-transtion);
+  -webkit-transition: var(--main-transtion);
+  -moz-transition: var(--main-transtion);
+  -ms-transition: var(--main-transtion);
+  -o-transition: var(--main-transtion);
+}
+
+.parent-5 a:hover {
+  text-decoration: underline;
+}
+
+.parent-5 span {
+  text-transform: uppercase;
+  padding-bottom: 25px;
+  font-weight: bold;
+}
+
+.parent-5 .product .price {
+  text-decoration: none;
+  color: var(--back-color);
+  transition: var(--main-transtion);
+  -webkit-transition: var(--main-transtion);
+  -moz-transition: var(--main-transtion);
+  -ms-transition: var(--main-transtion);
+  -o-transition: var(--main-transtion);
+}
+
+
+@media (max-width : 600px) {
+  .parent-4 .question p {
+    font-size: 15px;
+  }
+}
+
+@media (min-width : 600px) {}
+
+@media (min-width : 768px) {}
+
+@media (min-width : 992px) {}
